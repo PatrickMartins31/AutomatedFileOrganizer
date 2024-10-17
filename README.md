@@ -20,3 +20,19 @@ This project automates the organization of files in your Downloads folder, autom
   - `P:/Downloads/Download Images` - For image files (JPG, PNG, etc.)
   - `P:/Downloads/Download Word_PP_Excel` - For Word, PowerPoint, and Excel documents
 
+# How It Works
+
+- The script uses Python’s **watchdog** library to monitor changes in the Downloads folder.
+- Whenever a file is added or modified, the script checks its extension and moves it to the appropriate folder.
+- If a file with the same name already exists in the target folder, the script ensures that the new file is renamed with a unique identifier to prevent overwriting.
+
+## Example
+
+1. Download a PDF file in your Downloads folder, and it will automatically be moved to **Download PDF**.
+2. Download an image (e.g., `photo.jpg`), and it will be moved to **Download Images**.
+3. Download a PowerPoint presentation or Word document, and it will be moved to **Download Word_PP_Excel**.
+
+## Dependencies
+
+- Python 3.x
+- Watchdog
